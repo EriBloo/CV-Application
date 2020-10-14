@@ -1,0 +1,19 @@
+.education-field-wrapper {
+  margin: 0 1rem 0 1rem;
+  padding-bottom: 2rem;
+
+  .education-form {
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin: 0.5rem 0 0.5rem;
+    }
+  }
+}
+
+.education-field-wrapper + .education-field-wrapper {
+  padding-top: 2rem;
+  border-top: #333333 1px solid;
+}

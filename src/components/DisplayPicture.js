@@ -1,5 +1,5 @@
 import React from 'react';
-import './DisplayPicture.scss';
+import '../styles/DisplayPicture.scss';
 
 class DisplayPicture extends React.Component {
   render() {

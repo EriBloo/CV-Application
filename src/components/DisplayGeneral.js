@@ -1,6 +1,6 @@
 import React from 'react';
 import { format } from 'date-fns';
-import './DisplayGeneral.scss';
+import '../styles/DisplayGeneral.scss';
 
 class DisplayGeneral extends React.Component {
   render() {
