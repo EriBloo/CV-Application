@@ -1,0 +1,16 @@
+.display-general-wrapper {
+  margin: 2rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: center;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 2fr;
+  
+  .input-section {
+    width: 90%;
+    height: 90%;
+    background-color: #eeeeee;
+    border-radius: 1rem;
+    overflow-y: auto;
+  }
+
+  .display-section {
+    width: 90%;
+    height: 90%;
+    background-color: #eeeeee;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
