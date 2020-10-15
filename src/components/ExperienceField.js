@@ -6,14 +6,14 @@ class ExperienceField extends React.Component {
     return (
       <div id={this.props.id} className='experience-field-wrapper'>
       <form className='experience-form'>
-        <label htmlFor='company'>Company:</label>
-        <input type='text' id='company' name='company'></input>
         <label htmlFor='position'>Position:</label>
-        <input type='text' id='title' name='position'></input>
+        <input type='text' id='title' name='position' onChange={this.props.updateExperience} ></input>
+        <label htmlFor='company'>Company:</label>
+        <input type='text' id='company' name='company' onChange={this.props.updateExperience} ></input>
         <label htmlFor='from'>From:</label>
-        <input type='date' id='from' name='from'></input>
+        <input type='date' id='from' name='from' onChange={this.props.updateExperience} ></input>
         <label htmlFor='to'>To:</label>
-        <input type='date' id='to' name='to'></input>
+        <input type='date' id='to' name='to' onChange={this.props.updateExperience} ></input>
       </form>
     </div>
     )

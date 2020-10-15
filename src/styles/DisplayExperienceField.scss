@@ -1,0 +1,19 @@
+.display-experience-field-wrapper {
+  background-color: #aaaaaa;
+  border-radius: 1rem;
+  color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 1rem;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+
+.display-experience-field-wrapper + 
+.display-experience-field-wrapper {
+  margin-top: 2rem;
+}

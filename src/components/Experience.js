@@ -13,7 +13,7 @@ class Experience extends React.Component {
         </div>
         {this.props.experience.map((_, idx) => {
           return (
-            <ExperienceField key={idx} id={idx}/>
+            <ExperienceField key={idx} id={idx} updateExperience={this.props.updateExperience} />
           );
         })}
       </div>

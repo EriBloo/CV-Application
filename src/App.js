@@ -6,6 +6,7 @@ import DisplayGeneral from './components/DisplayGeneral';
 import DisplayPicture from './components/DisplayPicture';
 import pictureTemplate from '../src/img/portrait-solid-gray.png';
 import DisplayEducation from './components/DisplayEducation';
+import DisplayExperience from './components/DisplayExperience';
 import './styles/App.scss'
 
 class App extends React.Component {
@@ -45,6 +46,7 @@ class App extends React.Component {
     this.addExperienceField = this.addExperienceField.bind(this);
     this.removeExperienceField = this.removeExperienceField.bind(this);
     this.updateEducation = this.updateEducation.bind(this);
+    this.updateExperience = this.updateExperience.bind(this);
   }
 
   updateGeneral({target}) {
@@ -125,6 +127,20 @@ class App extends React.Component {
     })
   }
 
+  updateExperience({target}) {
+    const id = target.parentNode.parentNode.getAttribute('id');
+    this.setState((state) => {
+      const experience = [...state.experience];
+      experience[id] = {
+        ...experience[id],
+        [target.name]: target.value,
+      }
+      return {
+        experience,
+      }
+    });
+  }
+
 
   render() {
     return (
@@ -132,12 +148,13 @@ class App extends React.Component {
         <div id='inputSection' className='input-section'>
           <General updateGeneral={this.updateGeneral} updatePicture={this.updatePicture} />
           <Education education={this.state.education} addEducationField={this.addEducationField} removeEducationField={this.removeEducationField} updateEducation={this.updateEducation} />
-          <Experience experience={this.state.experience} addExperienceField={this.addExperienceField} removeExperienceField={this.removeExperienceField} />
+          <Experience experience={this.state.experience} addExperienceField={this.addExperienceField} removeExperienceField={this.removeExperienceField} updateExperience={this.updateExperience} />
         </div>
         <div id='displaySection' className='display-section'>
           <DisplayGeneral general={this.state.general} />
           <DisplayPicture picture={this.state.general.picture} />
           <DisplayEducation education={this.state.education} />
+          <DisplayExperience experience={this.state.experience} />
         </div>
       </div>
     )
